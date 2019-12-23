@@ -17,6 +17,11 @@ namespace Lamp.iOS.Views
         {
             base.ViewDidLoad();
 
+            DoBind();
+        }
+
+        private void DoBind()
+        {
             var set = this.CreateBindingSet<MainView, MainViewModel>();
             set.Bind(TipLabel).To(vm => vm.Tip);
             set.Bind(SubTotalTextField).To(vm => vm.SubTotal);

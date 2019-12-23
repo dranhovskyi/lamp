@@ -5,15 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Converters\**" />
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Converters\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Converters\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Class1.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="6.4.1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
-    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>
