@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dynamic Scroll View-->
+        <scene sceneID="AcJ-VU-WFg">
+            <objects>
+                <viewController storyboardIdentifier="DynamicScrollView" id="1hB-K9-1nK" customClass="DynamicScrollView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zx3-Tr-Jdq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31X-lK-H3e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ymf-yz-DdO">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="S6K-sF-uuE">
+                                                <rect key="frame" x="8" y="30" width="304" height="31"/>
+                                            </slider>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="S6K-sF-uuE" firstAttribute="top" secondItem="Ymf-yz-DdO" secondAttribute="top" constant="30" id="2u8-Bl-8cN"/>
+                                            <constraint firstAttribute="height" constant="1000" id="RKu-nR-Oa8"/>
+                                            <constraint firstItem="S6K-sF-uuE" firstAttribute="leading" secondItem="Ymf-yz-DdO" secondAttribute="leading" constant="10" id="o3F-dd-NsG"/>
+                                            <constraint firstAttribute="trailing" secondItem="S6K-sF-uuE" secondAttribute="trailing" constant="10" id="yok-Gb-Hwn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ymf-yz-DdO" secondAttribute="bottom" id="3AU-fH-0vm"/>
+                                    <constraint firstItem="Ymf-yz-DdO" firstAttribute="top" secondItem="31X-lK-H3e" secondAttribute="top" id="6oM-Tq-PcH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ymf-yz-DdO" secondAttribute="trailing" id="ezR-Ea-im2"/>
+                                    <constraint firstItem="Ymf-yz-DdO" firstAttribute="leading" secondItem="31X-lK-H3e" secondAttribute="leading" id="gF2-gB-Uph"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nPB-VX-hPF" firstAttribute="bottom" secondItem="31X-lK-H3e" secondAttribute="bottom" id="5N3-ca-q2q"/>
+                            <constraint firstItem="nPB-VX-hPF" firstAttribute="trailing" secondItem="31X-lK-H3e" secondAttribute="trailing" id="FDB-hP-Vj4"/>
+                            <constraint firstItem="31X-lK-H3e" firstAttribute="leading" secondItem="nPB-VX-hPF" secondAttribute="leading" id="WYr-e0-KBn"/>
+                            <constraint firstItem="Ymf-yz-DdO" firstAttribute="width" secondItem="Zx3-Tr-Jdq" secondAttribute="width" id="iXX-Kf-X22"/>
+                            <constraint firstItem="31X-lK-H3e" firstAttribute="top" secondItem="nPB-VX-hPF" secondAttribute="top" id="yjz-1b-Vvs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nPB-VX-hPF"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="niR-sN-eRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.625" y="745.77464788732391"/>
+        </scene>
+    </scenes>
+</document>

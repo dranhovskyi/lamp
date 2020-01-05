@@ -148,6 +148,10 @@
     <Compile Include="Views\Abstract\BaseTableViewCell.cs" />
     <Compile Include="Views\Abstract\BaseCollectionViewCell.cs" />
     <Compile Include="Views\Abstract\BaseView.cs" />
+    <Compile Include="Views\DynamicScrollView.cs" />
+    <Compile Include="Views\DynamicScrollView.designer.cs">
+      <DependentUpon>DynamicScrollView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lamp.Core\Lamp.Core.csproj">
@@ -160,6 +164,7 @@
     <InterfaceDefinition Include="Views\MainView.storyboard" />
     <InterfaceDefinition Include="Views\SelfSizingTableView.storyboard" />
     <InterfaceDefinition Include="Views\Cells\SelfSizingViewCell.xib" />
+    <InterfaceDefinition Include="Views\DynamicScrollView.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Cells\" />

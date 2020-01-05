@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
@@ -7,13 +7,15 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace Lamp.iOS.Views
 {
     [Register ("MainView")]
     partial class MainView
     {
+        [Outlet]
+        UIKit.UIButton DynamicScrollViewButton { get; set; }
+
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel Generosity { get; set; }

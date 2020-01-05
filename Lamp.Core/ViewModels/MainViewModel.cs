@@ -72,6 +72,16 @@ namespace Lamp.Core.ViewModels
             }
         }
 
+        private IMvxAsyncCommand _navigateToDynamicScrollViewCommand;
+        public IMvxAsyncCommand NavigateToDynamicScrollViewCommand
+        {
+            get
+            {
+                _navigateToDynamicScrollViewCommand ??= new MvxAsyncCommand(async () => await NavigateToDynamicScrollView());
+                return _navigateToDynamicScrollViewCommand;
+            }
+        }
+
         private void Recalculate()
         {
             Tip = _calculationService.TipAmount(SubTotal, Generosity);
@@ -80,6 +90,11 @@ namespace Lamp.Core.ViewModels
         private async Task NavigateToTableView()
         {
             await _mvxNavigationService.Navigate<SelfSizingTableViewModel>();
+        }
+
+        private async Task NavigateToDynamicScrollView()
+        {
+            await _mvxNavigationService.Navigate<DynamicScrollViewModel>();
         }
     }
 }

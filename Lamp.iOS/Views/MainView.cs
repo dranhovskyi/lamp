@@ -28,6 +28,7 @@ namespace Lamp.iOS.Views
             set.Bind(SubTotalTextField).To(vm => vm.SubTotal);
             set.Bind(GenerositySlider).To(vm => vm.Generosity);
             set.Bind(TableViewButton).To(vm => vm.NavigateToTableViewCommand);
+            set.Bind(DynamicScrollViewButton).To(vm => vm.NavigateToDynamicScrollViewCommand);
             set.Apply();
 
             View.AddGestureRecognizer(new UITapGestureRecognizer(() =>
