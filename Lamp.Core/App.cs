@@ -13,7 +13,7 @@ namespace Lamp.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<MainViewModel>();
+            RegisterCustomAppStart<CustomMvxAppStart<MainViewModel>>();
         }
     }
 }

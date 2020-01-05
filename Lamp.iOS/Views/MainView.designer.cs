@@ -32,6 +32,10 @@ namespace Lamp.iOS.Views
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton TableViewButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel TipLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -54,6 +58,11 @@ namespace Lamp.iOS.Views
             if (SubTotalTextField != null) {
                 SubTotalTextField.Dispose ();
                 SubTotalTextField = null;
+            }
+
+            if (TableViewButton != null) {
+                TableViewButton.Dispose ();
+                TableViewButton = null;
             }
 
             if (TipLabel != null) {

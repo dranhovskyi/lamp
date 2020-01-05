@@ -1,6 +1,5 @@
 ﻿using Lamp.Core;
 using MvvmCross.Platforms.Android.Core;
-using MvvmCross.ViewModels;
 
 namespace Lamp.Droid
 {
@@ -9,8 +8,8 @@ namespace Lamp.Droid
         protected override void InitializeFirstChance()
         {
             base.InitializeFirstChance();
-
-            // Mvx.IoCProvider.RegisterType<IMvxJsonConverter, MvxJsonConverter>();
+            //Register services
+            //Mvx.IoCProvider.RegisterType<IMvxJsonConverter, MvxJsonConverter>();
         }
 
         protected override void InitializeLastChance()

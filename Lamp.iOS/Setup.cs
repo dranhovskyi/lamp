@@ -8,8 +8,8 @@ namespace Lamp.iOS
         protected override void InitializeFirstChance()
         {
             base.InitializeFirstChance();
-
-           // Mvx.IoCProvider.RegisterType<IMvxJsonConverter, MvxJsonConverter>();
+            //Register services
+            //Mvx.IoCProvider.RegisterType<IMvxJsonConverter, MvxJsonConverter>();
         }
 
         protected override void InitializeLastChance()

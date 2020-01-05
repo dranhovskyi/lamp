@@ -1,15 +1,19 @@
 ﻿using System.Threading.Tasks;
 using Lamp.Core.Services;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
 namespace Lamp.Core.ViewModels
 {
     public class MainViewModel : MvxViewModel
     {
+        private readonly IMvxNavigationService _mvxNavigationService;
         private readonly ICalculationService _calculationService;
 
-        public MainViewModel(ICalculationService calculationService)
+        public MainViewModel(IMvxNavigationService mvxNavigationService, ICalculationService calculationService)
         {
+            _mvxNavigationService = mvxNavigationService;
             _calculationService = calculationService;
         }
 
@@ -58,9 +62,24 @@ namespace Lamp.Core.ViewModels
             }
         }
 
+        private IMvxAsyncCommand _navigateToTableViewCommand;
+        public IMvxAsyncCommand NavigateToTableViewCommand
+        {
+            get
+            {
+                _navigateToTableViewCommand ??= new MvxAsyncCommand(async () => await NavigateToTableView());
+                return _navigateToTableViewCommand;
+            }
+        }
+
         private void Recalculate()
         {
             Tip = _calculationService.TipAmount(SubTotal, Generosity);
+        }
+
+        private async Task NavigateToTableView()
+        {
+            await _mvxNavigationService.Navigate<SelfSizingTableViewModel>();
         }
     }
 }
